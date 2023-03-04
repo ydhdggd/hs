@@ -95,7 +95,7 @@ async def start_command(client: Client, message: Message):
         )
         await message.reply_photo(
             photo="https://te.legra.ph/file/403a8223288699d50ecf1.jpg",
-            caption = START_MSG.format(m.from_user.mention),
+            caption = START_MSG.format(message.from_user.mention),
             reply_markup = reply_markup,
             quote = True
         )
@@ -142,8 +142,7 @@ async def not_joined(client: Client, message: Message):
                 id = message.from_user.id
             ),
         reply_markup = InlineKeyboardMarkup(buttons),
-        quote = True,
-        disable_web_page_preview = True
+        quote = True
     )
 
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
