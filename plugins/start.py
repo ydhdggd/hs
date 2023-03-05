@@ -86,17 +86,20 @@ async def start_command(client: Client, message: Message):
         return
     else:
         reply_markup = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("💠 ꜱᴜᴩᴩᴏʀᴛ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 💠", url='https://t.me/TAMIL_FLIMS_HD')
-                ]
-            ],[
-                [
-                    InlineKeyboardButton("🦋 ᴀʙᴏᴜᴛ 🦋", callback_data = "about"),
-                    InlineKeyboardButton("💥 ᴜᴩᴅᴀᴛᴇꜱ 💥", url='https://t.me/+rs4CPTFXPjs5Yzhl')
-                ]
-            ]
-        )
+         [
+             [
+                 InlineKeyboardButton("💠ꜱᴜᴩᴩᴏʀᴛ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 💠", url="https://t.me/TAMIL_FLIMS_HD")
+             ],
+             [
+                 InlineKeyboardButton("💥 ᴜᴘᴅᴀᴛᴇꜱ 💥", url="https://t.me/Hs_Botz"),
+                 InlineKeyboardButton("❣️ ᴏᴡɴᴇʀ ❣️", url="https://t.me/Hari_OP")
+             ],
+             [
+                 InlineKeyboardButton("🦋 ʜᴇʟᴩ 🦋", callback_data="help"),
+                 InlineKeyboardButton("⚡ ᴀʙᴏᴜᴛ ᴍᴇ ⚡", callback_data="about")
+             ]
+         ]
+    )
         await message.reply_photo(
             photo="https://telegra.ph/file/24cba9927f90efadf5885.jpg",
             caption = START_MSG.format(
