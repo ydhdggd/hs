@@ -98,7 +98,6 @@ async def start_command(client: Client, message: Message):
             caption = START_MSG.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
-                username = None if not message.from_user.username else '@' + message.from_user.username,
                 mention = message.from_user.mention,
                 id = message.from_user.id
             ),
