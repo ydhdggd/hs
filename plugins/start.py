@@ -88,13 +88,17 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("💠 ꜱᴜᴩᴩᴏʀᴛ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ 💠", url='https://t.me/TAMIL_FLIMS_HD')
+                ]
+            ],[
+                [
+                    InlineKeyboardButton("🦋 ᴀʙᴏᴜᴛ 🦋", callback_data = "about"),
+                    InlineKeyboardButton("💥 ᴜᴩᴅᴀᴛᴇꜱ 💥", url='https://t.me/+rs4CPTFXPjs5Yzhl')
                 ]
             ]
         )
         await message.reply_photo(
-            photo="https://te.legra.ph/file/403a8223288699d50ecf1.jpg",
+            photo="https://telegra.ph/file/24cba9927f90efadf5885.jpg",
             caption = START_MSG.format(
                 first = message.from_user.first_name,
                 last = message.from_user.last_name,
