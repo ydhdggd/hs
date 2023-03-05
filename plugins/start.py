@@ -95,15 +95,8 @@ async def start_command(client: Client, message: Message):
         )
         await message.reply_photo(
             photo="https://te.legra.ph/file/403a8223288699d50ecf1.jpg",
-            caption = START_MSG.format(
-                first = message.from_user.first_name,
-                last = message.from_user.last_name,
-                mention = message.from_user.mention,
-                id = message.from_user.id
-            ),
-            reply_markup = reply_markup,
-            #disable_web_page_preview = True,
-            quote = True
+            caption = START_MSG.format(message.from_user.mention),
+            reply_markup = reply_markup
         )
         return
 
